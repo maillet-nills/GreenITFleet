@@ -24,8 +24,11 @@ public class Velo {
     public String getModele() { return modele; }
     
     public int getNiveauBatterie() { return niveauBatterie; }
-    public void setNiveauBatterie(int niveauBatterie) { 
-        this.niveauBatterie = niveauBatterie; 
+    public void setNiveauBatterie(int niveauBatterie) {
+        if (niveauBatterie < 0 || niveauBatterie > 100){
+            return;
+        }
+        this.niveauBatterie = niveauBatterie;
     }
 
     public boolean isEstLoue() { return estLoue; }
